@@ -1,0 +1,20 @@
+{{>header}}
+
+<h3>{{location}}</h3>
+<h4>{{forecast}}</h4>
+<div class="card-signin">
+    <div class="card-body">
+        <h5 class="card-title text-center">Weather Forecaster</h5>
+        <form class="form-signin" method="post" id="myForm">
+            <input type="text" id="inputAddress" class="form-control" name="Login"
+                placeholder="Enter Location Name/Address" required autofocus>
+            <br />
+
+            <button id="login-btn" type="submit">Search</button>
+        </form>
+    </div>
+</div>
+<br />
+<h3 id="location"></h3>
+<h3 id="forecast"></h3>
+{{>footer}}

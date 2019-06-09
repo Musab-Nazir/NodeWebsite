@@ -1,0 +1,133 @@
+a.landing:link {
+    color: #fff;
+    font-weight: lighter;
+    font-size: 25px;
+    padding: 0 0px;
+    text-decoration: none;
+}
+
+a.landing:visited {
+    color: #7AC79C;
+    font-weight: lighter;
+    font-size: 25px;
+    padding: 0 0px;
+}
+
+a.landing::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #CB9B2C;
+    transition: width .2s;
+}
+
+a.landing:hover::after {
+    width: 100%;
+    transition: width .2s;
+}
+
+.centered {
+    position: relative;
+    top: 25%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+li.landing {
+    display: inline-block;
+    text-decoration: none;
+    margin-left: auto;
+    margin-right: auto;
+    padding-right: 10px;
+}
+
+#projects {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    align-content: space-between;
+    justify-content: space-between;
+}
+
+.card {
+    position: relative;
+    overflow: hidden;
+}
+
+.image:hover {
+    transition: transform .2s;
+    -ms-transform: scale(1.1);
+    /* IE 9 */
+    -webkit-transform: scale(1.1);
+    /* Safari 3-8 */
+    transform: scale(1.1);
+}
+
+.image img {
+    max-width: 100%;
+
+    -moz-transition: all 0.3s;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+#navLogo {
+    width: 40px;
+    margin-left: 0;
+    margin-top: -10px;
+}
+
+#navName {
+    font-family: "Segoe UI", "Roboto", "Helvetica Neue";
+    color: #fff;
+    margin-right: 20px;
+}
+
+#footer {
+    width: 100%;
+    background-color: #343a40;
+    color: white;
+    text-align: center;
+    height: 5em;
+}
+
+.myContent {
+    margin: 15px;
+    min-height: 100vh;
+}
+
+#login-btn {
+    width: 25em;
+    display: block;
+    margin: 0 auto;
+    font-size: 16px;
+    font-weight: 600;
+    color: #fff;
+    height: 55px;
+    text-align: center;
+    border: none;
+    background-color: #7AC79C;
+    border-radius: 50px;
+}
+
+.card-signin {
+    border: none;
+    max-width: 40%;
+    margin: 0 auto;
+    border-radius: 1rem;
+    box-shadow: 0 1.5rem 1rem 0 rgba(0, 0, 0, 0.1);
+}
+
+.card-signin .card-title {
+    margin-bottom: 2rem;
+    font-weight: 300;
+    font-size: 1.5rem;
+}
+
+.card-signin .card-body {
+    padding: 2rem;
+    border-radius: 20px;
+    box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.1);
+}
