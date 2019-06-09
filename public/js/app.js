@@ -11,7 +11,7 @@ form.on('submit', (e) => {
     fetch('/weather/forecast?location=' + address).then((res) => {
         res.json().then((data) => {
             if (data.error) {
-                console.log(data.error)
+                $('#location').text(data.error)
             } else {
                 console.log(data.location)
                 console.log(data.forecast)

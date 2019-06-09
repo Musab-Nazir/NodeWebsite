@@ -58,13 +58,17 @@ app.get('/weather/forecast', (req, res) => {
         GetLocation.geoCode(req.query.location, (error, GeoData) => {
             // end if there is an error
             if (error) {
-                return res.send(error)
+                return res.send({
+                    error: error,
+                })
             }
             // use the data object we got from geocoding
             Forecaster.forecast(GeoData.latitude, GeoData.longitude, (error, ForecastData) => {
                 // end it there is an error
                 if (error) {
-                    return res.send(error)
+                    return res.send({
+                        error: error,
+                    })
                 }
                 // both api calls succeeded so send back the data
                 res.send({
