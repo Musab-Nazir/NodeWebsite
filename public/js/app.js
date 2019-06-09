@@ -8,7 +8,7 @@ form.on('submit', (e) => {
     e.preventDefault()
     var address = form.children()[0].value
     console.log(address)
-    fetch('http://localhost:3000/weather/forecast?location=' + address).then((res) => {
+    fetch('/weather/forecast?location=' + address).then((res) => {
         res.json().then((data) => {
             if (data.error) {
                 console.log(data.error)
