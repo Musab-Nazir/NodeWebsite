@@ -35,20 +35,6 @@ app.get('/about', (req, res) => {
     })
 })
 
-app.get('/products', (req, res) => {
-    if (!req.query.search) {
-        res.send({
-            error: "You must provide a search term"
-        })
-    } else {
-        console.log(req.query)
-        res.send({
-            products: []
-        })
-    }
-
-})
-
 app.get('/weather/forecast', (req, res) => {
     if (!req.query.location) {
         res.send({
@@ -58,17 +44,13 @@ app.get('/weather/forecast', (req, res) => {
         GetLocation.geoCode(req.query.location, (error, GeoData) => {
             // end if there is an error
             if (error) {
-                return res.send({
-                    error: error,
-                })
+                return res.send(error)
             }
             // use the data object we got from geocoding
             Forecaster.forecast(GeoData.latitude, GeoData.longitude, (error, ForecastData) => {
                 // end it there is an error
                 if (error) {
-                    return res.send({
-                        error: error,
-                    })
+                    return res.send(error)
                 }
                 // both api calls succeeded so send back the data
                 res.send({
